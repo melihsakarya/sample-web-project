@@ -56,18 +56,17 @@ class SampleWebProjectApplicationTest2 {
 						.withStatus(200)
 						.withStatus(HttpStatus.OK.value())
 						.withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-						.withBody("{\"id\":53,\"createUser\":null,\"updateUser\":null,\"createDate\":null,\"updateDate\":null,\"name\":\"Ahmet\",\"lastname\":\"Dursun\",\"age\":29}")));
+						//.withBody("{\"id\":53,\"createUser\":null,\"updateUser\":null,\"createDate\":null,\"updateDate\":null,\"name\":\"Ahmet\",\"lastname\":\"Dursun\",\"age\":29}")));
+						.withBodyFile("user.json")));
 
 		User user = userService.findByUser(53L);
 		assertEquals("Ahmet", user.getName());
-
-
 	}
 
 	@Test
 	void userListTest() throws InterruptedException {
 
-		stubFor(get(urlPathMatching("/rest/user/list"))
+		stubFor(get(urlPathEqualTo("/rest/user/list"))
 				.willReturn(aResponse()
 						.withStatus(200)
 						.withStatus(HttpStatus.OK.value())
@@ -93,6 +92,13 @@ class SampleWebProjectApplicationTest2 {
 
 		User user = userService.saveUser(new User("Melih", "Sakarya", 39));
 		assertNotNull(user.getId());
+
+	}
+
+	@Test
+	public void kullaniciListesi(){
+		List<User> kullaniciListesi = userService.kullaniciListesi();
+		assertTrue(kullaniciListesi.size() > 0);
 
 	}
 

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.testinium</groupId>
-	<artifactId>sample-web-project</artifactId>
+	<artifactId>sample-wiremock-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>sample-web-project</name>
+	<name>sample-wiremock-project</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

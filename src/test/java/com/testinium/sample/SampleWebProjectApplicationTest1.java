@@ -35,6 +35,7 @@ class SampleWebProjectApplicationTest1 {
 	UserService userService;
 
 
+
 	@Test
 	void userTest() throws InterruptedException {
 		User user = userService.findByUser(53L);

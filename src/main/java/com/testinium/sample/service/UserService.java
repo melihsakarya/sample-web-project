@@ -21,7 +21,6 @@ public class UserService {
     RestTemplateBuilder builder;
 
 
-    //http://63.34.88.168/sample-javaee
     @Value( "${baseURL}" )
     String baseURL;
 
@@ -39,6 +38,11 @@ public class UserService {
     public User findByUser(Long userId){
         User user = builder.build().getForObject(baseURL + "/rest/user/" + userId, User.class);
         return user;
+    }
+
+    public List<User> kullaniciListesi(){
+        List<User> userList = builder.build().getForObject(baseURL + "/kullanici",  List.class);
+        return userList;
     }
 
 }

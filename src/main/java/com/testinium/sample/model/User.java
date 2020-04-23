@@ -3,10 +3,10 @@ package com.testinium.sample.model;
 public class User {
 
 
-    Long id;
-    String name;
-    String lastname;
-    Integer age;
+    private Long id;
+    private String name;
+    private String lastname;
+    private Integer age;
 
     public User() {
     }

@@ -1,0 +1,20 @@
+{
+  "id" : "17ce16af-ecc3-4f97-9a97-0b8ae5da0f2d",
+  "name" : "sample-javaee_rest_user_list",
+  "request" : {
+    "url" : "/kullanici",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "users.json",
+    "headers" : {
+      "Server" : "Apache-Coyote/1.1",
+      "Content-Type" : "application/json",
+      "Date" : "Wed, 22 Apr 2020 15:57:27 GMT"
+    }
+  },
+  "uuid" : "17ce16af-ecc3-4f97-9a97-0b8ae5da0f2d",
+  "persistent" : true,
+  "insertionIndex" : 2
+}
